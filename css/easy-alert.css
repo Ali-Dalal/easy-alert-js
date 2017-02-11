@@ -1,0 +1,18 @@
+.easy-alert-global {
+    position: fixed;
+}
+
+.easy-alert {
+    cursor: pointer;
+    z-index: 999999999;
+}
+
+.easy-alert .alert {
+    margin: 0;
+}
+
+.alert-ali {
+    color: black;
+    background-color: whitesmoke;
+    border-color: #bce8f1;
+}
