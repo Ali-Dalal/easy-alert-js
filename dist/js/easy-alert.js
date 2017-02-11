@@ -48,6 +48,8 @@
             }
             if (hPos === "center") {
                 //center alert
+                containerStyle.left = "50%";
+                containerStyle.transform = 'translateX(-50%)';
             } else if (hPos === "left") {
                 //left alert
                 containerStyle.left = "5px";
