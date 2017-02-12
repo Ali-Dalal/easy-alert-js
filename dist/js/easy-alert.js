@@ -50,6 +50,7 @@
                 //center alert
                 containerStyle.left = "50%";
                 containerStyle.transform = 'translateX(-50%)';
+                globalPositionClass += '-c';
             } else if (hPos === "left") {
                 //left alert
                 containerStyle.left = "5px";
@@ -87,7 +88,6 @@
                 setTimeout(hideAlert, settings.delay);
             }
             $alertContainer.appendTo('body').show({effect: settings.showAnimation, duration: settings.showDuration});
-
             return settings.message;
         }
         return this;
