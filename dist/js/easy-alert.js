@@ -136,39 +136,3 @@
         'r': 'right'
     }
 }(jQuery));
-
-// var Plugin = function($self, options) {
-//     this.$self = $self;
-//     this.options = $.extend({}, $.fn.plugin.defaults, options);
-// };
-//
-// Plugin.prototype.display = function(){
-//     console.debug("Plugin.display");
-// };
-//
-// Plugin.prototype.update = function() {
-//     console.debug("Plugin.update");
-// };
-//
-// $.fn.plugin = function(option) {
-//     var options = typeof option == "object" && option;
-//     return this.each(function() {
-//         var $this = $(this);
-//         console.log($this);
-//         var $plugin = $this.data("plugin");
-//
-//         if(!$plugin) {
-//             $plugin = new Plugin($this, options);
-//             $this.data("plugin", $plugin);
-//         }
-//
-//         if (typeof option == 'string') {
-//             $plugin[option]();
-//         } else {
-//             $plugin.display();
-//         }
-//     });
-// };+
-// $.fn.plugin.defaults = {
-//     propname: "propdefault"
-// };
