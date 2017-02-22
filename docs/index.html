@@ -1,309 +1,229 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <title>Cayman</title>
+    <title>Easy alert-js</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#157878">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/cayman.css">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Cayman</h1>
-      <h2 class="project-tagline">A responsive theme for your project on GitHub Pages</h2>
-      <a href="#" class="btn">View on GitHub</a>
-      <a href="#" class="btn">Download .zip</a>
-      <a href="#" class="btn">Download .tar.gz</a>
-    </section>
+    <link rel="stylesheet" href="vendor/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="css/normalize.css">-->
+    <!--<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>-->
+    <!--<link rel="stylesheet" href="css/cayman.css">-->
+    <link rel="stylesheet" href="../dist/css/easy-alert.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<section class="page-header-main">
+    <h1 class="project-name">Easy alert-js</h1>
+    <h2 class="project-tagline">jQuery plugin for displaying alerts/notifications</h2>
+    <a href="https://github.com/Ali-Dalal/easy-alert-js" class="btn-easy-alert">View on GitHub</a>
+    <a href="https://github.com/Ali-Dalal/easy-alert-js/archive/master.zip" class="btn-easy-alert">Download .zip</a>
+    <!--<a href="#" class="btn">Download .tar.gz</a>-->
+</section>
 
-    <section class="main-content">
-      <p>Text can be <strong>bold</strong>, <em>italic</em>, or <del>strikethrough</del>. <a href="https://github.com">Links</a> should be blue with no underlines (unless hovered over).</p>
+<section class="description-section">
+    <h2><strong>What is easy alert-js?</strong></h2>
+    <p>easy alert-js is a jQuery plugin for displaying both global and element alerts, easy alert has bootstrap alert
+        colors (success, info, warning, danger)</p>
+    <p>element alerts coming soon!</p>
+    <hr>
+    <h2><strong>Global alerts example:</strong></h2>
+    <div class="row">
+        <br>
+        <div class="col-md-4 col-sm-4">
+            <div class="text-center">
+                <button class="btn btn-block btn-primary easy-alert-btn" data-easy-alert-position="t l">Top Left
+                </button>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+            <div class="text-center">
+                <button class="btn btn-block btn-primary easy-alert-btn" data-easy-alert-position="t c">Top Center
+                </button>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+            <div class="text-center">
+                <button class="btn btn-block btn-primary easy-alert-btn" data-easy-alert-position="t r">Top Right
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <br>
+        <div class="col-md-4 col-sm-4">
+            <div class="text-center">
+                <button class="btn btn-block btn-primary easy-alert-btn" data-easy-alert-position="b l">Bottom Left
+                </button>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+            <div class="text-center">
+                <button class="btn btn-block btn-primary easy-alert-btn" data-easy-alert-position="b c">Bottom Center
+                </button>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+            <div class="text-center">
+                <button class="btn btn-block btn-primary easy-alert-btn" data-easy-alert-position="b r">Bottom Right
+                </button>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <h2><strong>Alert types:</strong></h2>
+    <br>
+    <div class="row">
+        <div class="col-md-6 col-sm-6">
+            <div class="text-center">
+                <button class="btn btn-success btn-lg easy-alert-type-btn" data-alert-type="success"
+                        data-easy-alert-position="t l">SUCCESS
+                </button>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="text-center">
+                <button class="btn btn-info btn-lg easy-alert-type-btn" data-alert-type="info"
+                        data-easy-alert-position="t r">INFO
+                </button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-6 col-sm-6">
+            <div class="text-center">
+                <button class="btn btn-danger btn-lg easy-alert-type-btn" data-alert-type="danger"
+                        data-easy-alert-position="b l">DANGER
+                </button>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="text-center">
+                <button class="btn btn-warning btn-lg easy-alert-type-btn" data-alert-type="warning"
+                        data-easy-alert-position="b r">WARNING
+                </button>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <h2><strong>Easy alert animation:</strong></h2>
+    <blockquote><p class="text-info">Add jQuery UI to enable easy-alert animations</p></blockquote>
+    <div class="row">
+        <div class="form-group">
+            <div class="col-md-4">
+                <select class="form-control select-animation">
+                    <option value="blind">Blind</option>
+                    <option value="bounce">Bounce</option>
+                    <option value="clip">Clip</option>
+                    <option value="drop">Drop</option>
+                    <option value="explode">Explode</option>
+                    <option value="fade">Fade</option>
+                    <option value="fold">Fold</option>
+                    <option value="highlight">Highlight</option>
+                    <option value="puff">Puff</option>
+                    <option value="pulsate">Pulsate</option>
+                    <option value="scale">Scale</option>
+                    <option value="shake">Shake</option>
+                    <option value="size">Size</option>
+                    <option value="slide">Slide</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-primary easy-alert-animation">SHOW ALERT</button>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <h2><strong>Define your own alert style:</strong></h2>
+    <p>It is easy to create your own easy alert style. To do this, you need to simply create your own CSS class and pass
+        it to easy alert options</p>
+    <pre>
+        <code>
+            .alert-custom {
+                color: #763c3c;
+                background-color: #ff003b;
+                border-color: #ff003b;
+            }
+        </code>
+    </pre>
+    <pre>
+        <code>
+            $.easyAlert('This is a custom alert','custom');
+        </code>
+    </pre>
+    <button class="btn btn-primary btn-lg custom-alert-btn">Try it!</button>
+    <hr>
+    <h2><strong>Events:</strong></h2>
+    <div class="row">
+        <div class="col-md-4 col-sm-4">
+            <div class="text-center">
+                <button class="btn btn-primary btn-lg btn-block event-complete">COMPLETE
+                </button>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+            <div class="text-center">
+                <button class="btn btn-primary btn-lg btn-block event-clicked">CLICKED
+                </button>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+            <div class="text-center">
+                <button class="btn btn-primary btn-lg btn-block event-hidden">HIDDEN
+                </button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <br>
+        <blockquote>Wants more events? Send me suggestions</blockquote>
+    </div>
+    <hr>
+    <h2><strong>Options:</strong></h2>
+    <pre>
+        <code>
+         {
+            <span class="key">'message'</span>:<span class="value">'Easy alert-js By Ali Dalal'</span>, <span
+                class="comment">//default message to be displayed</span>
+            <span class="key">'alertType'</span>:<span class="value"> 'success',</span> <span class="comment">//default alert type (warning,info,danger,success)</span>
+            <span class="key">'position'</span>:<span class="value"> 'b r',</span> <span class="comment">//preferred position</span>
+            <span class="key">'globalMinWidth'</span>:<span class="value"> '250px',</span> <span class="comment">//preferred minimum width of global alerts</span>
+            <span class="key">'clickToHide'</span>:<span class="value"> true,</span><span class="comment">//set whether to hide alert on click</span>
+            <span class="key">'autoHide'</span>:<span class="value"> false,</span><span class="comment">//set whether to automatically hide the alert after a period of time</span>
+            <span class="key">'time'</span>:<span class="value"> 5000,</span><span class="comment">//the time to hide the alert if previous boolean is set to true in ms</span>
+            <span class="key">'showAnimation'</span>:<span class="value"> 'fade',</span> <span class="comment">//preferred show animation if jQuery ui is included</span>
+            <span class="key">'showDuration'</span>:<span class="value"> 300,</span><span class="comment">//show duration time in ms</span>
+            <span class="key">'hideAnimation'</span>:<span class="value"> 'fade',</span><span class="comment">//preferred hide if jQuery ui is included</span>
+            <span class="key">'hideDuration'</span>:<span class="value"> 300,</span><span class="comment">//hide duration time in ms</span>
+            <span class="key">'globalSpace'</span>:<span class="value"> 5,</span><span class="comment">//set the space between two global alerts</span>
+            <span class="key">'complete'</span>:<span class="value"> null</span><span class="comment">//callback after alert shown successfully</span>
+            <span class="key">'clicked'</span>:<span class="value"> null</span><span class="comment">//callback after alert is clicked</span>
+            <span class="key">'hidden'</span>:<span class="value"> null</span><span class="comment">//callback after alert is hidden either by click or automatically after a period</span>
+        }
+        </code>
+    </pre>
+    <hr>
+    <h2><strong>API call:</strong></h2>
+    <pre>
+        <code>
+            <span class="comment">//to call global alert</span>
+            $.easyAlert(message[,alertType,position]);
 
-      <p>There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs.</p>
+            <span class="comment">//or</span>
+            $.easyAlert(options);
 
-      <p>There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs.</p>
+            <span class="comment">//You can change easy-alert defaults like this:</span>
+            $.fn.easyAlert.defaults.alertType = 'danger'
+            
+            <span class="comment">//Element alert is coming soon</span>
 
-      <blockquote>
-      <p>There should be no margin above this first sentence.</p>
+        </code>
+    </pre>
+</section>
 
-      <p>Blockquotes should be a lighter gray with a gray border along the left side.</p>
-
-      <p>There should be no margin below this final sentence.</p>
-      </blockquote>
-
-      <h1>
-      <a id="user-content-header-1" class="anchor" href="#header-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Header 1</h1>
-
-      <p>This is a normal paragraph following a header. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.</p>
-
-      <h2>
-      <a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Header 2</h2>
-
-      <blockquote>
-      <p>This is a blockquote following a header. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.</p>
-      </blockquote>
-
-      <h3>
-      <a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Header 3</h3>
-
-      <pre><code>This is a code block following a header.</code></pre>
-
-      <h4>
-      <a id="user-content-header-4" class="anchor" href="#header-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Header 4</h4>
-
-      <ul class="task-list">
-      <li>This is an unordered list following a header.</li>
-      <li>This is an unordered list following a header.</li>
-      <li>This is an unordered list following a header.</li>
-      </ul>
-
-      <h5>
-      <a id="user-content-header-5" class="anchor" href="#header-5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Header 5</h5>
-
-      <ol class="task-list">
-      <li>This is an ordered list following a header.</li>
-      <li>This is an ordered list following a header.</li>
-      <li>This is an ordered list following a header.</li>
-      </ol>
-
-      <h6>
-      <a id="user-content-header-6" class="anchor" href="#header-6" aria-hidden="true"><span class="octicon octicon-link"></span></a>Header 6</h6>
-
-      <table>
-      <thead>
-      <tr>
-      <th>What</th>
-      <th>Follows</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-      <td>A table</td>
-      <td>A header</td>
-      </tr>
-      <tr>
-      <td>A table</td>
-      <td>A header</td>
-      </tr>
-      <tr>
-      <td>A table</td>
-      <td>A header</td>
-      </tr>
-      </tbody>
-      </table>
-
-      <hr>
-
-      <p>There's a horizontal rule above and below this.</p>
-
-      <hr>
-
-      <p>Here is an unordered list:</p>
-
-      <ul class="task-list">
-      <li>Salt-n-Pepa</li>
-      <li>Bel Biv DeVoe</li>
-      <li>Kid 'N Play</li>
-      </ul>
-
-      <p>And an ordered list:</p>
-
-      <ol class="task-list">
-      <li>Michael Jackson</li>
-      <li>Michael Bolton</li>
-      <li>Michael Bublé</li>
-      </ol>
-
-      <p>And an unordered task list:</p>
-
-      <ul class="task-list">
-      <li class="task-list-item">
-      <input type="checkbox" class="task-list-item-checkbox" checked="" disabled=""> Create a sample markdown document</li>
-      <li class="task-list-item">
-      <input type="checkbox" class="task-list-item-checkbox" checked="" disabled=""> Add task lists to it</li>
-      <li class="task-list-item">
-      <input type="checkbox" class="task-list-item-checkbox" disabled=""> Take a vacation</li>
-      </ul>
-
-      <p>And a "mixed" task list:</p>
-
-      <ul class="task-list">
-      <li class="task-list-item">
-      <input type="checkbox" class="task-list-item-checkbox" disabled=""> Steal underpants</li>
-      <li>?</li>
-      <li class="task-list-item">
-      <input type="checkbox" class="task-list-item-checkbox" disabled=""> Profit!</li>
-      </ul>
-
-      <p>And a nested list:</p>
-
-      <ul class="task-list">
-      <li>Jackson 5
-
-      <ul class="task-list">
-      <li>Michael</li>
-      <li>Tito</li>
-      <li>Jackie</li>
-      <li>Marlon</li>
-      <li>Jermaine</li>
-      </ul>
-      </li>
-      <li>TMNT
-
-      <ul class="task-list">
-      <li>Leonardo</li>
-      <li>Michelangelo</li>
-      <li>Donatello</li>
-      <li>Raphael</li>
-      </ul>
-      </li>
-      </ul>
-
-      <p>Definition lists can be used with HTML syntax. Definition terms are bold and italic.</p>
-
-      <dl>
-          <dt>Name</dt>
-          <dd>Godzilla</dd>
-          <dt>Born</dt>
-          <dd>1952</dd>
-          <dt>Birthplace</dt>
-          <dd>Japan</dd>
-          <dt>Color</dt>
-          <dd>Green</dd>
-      </dl>
-
-      <hr>
-
-      <p>Tables should have bold headings and alternating shaded rows.</p>
-
-      <table>
-      <thead>
-      <tr>
-      <th>Artist</th>
-      <th>Album</th>
-      <th>Year</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-      <td>Michael Jackson</td>
-      <td>Thriller</td>
-      <td>1982</td>
-      </tr>
-      <tr>
-      <td>Prince</td>
-      <td>Purple Rain</td>
-      <td>1984</td>
-      </tr>
-      <tr>
-      <td>Beastie Boys</td>
-      <td>License to Ill</td>
-      <td>1986</td>
-      </tr>
-      </tbody>
-      </table>
-
-      <p>If a table is too wide, it should condense down and/or scroll horizontally.</p>
-
-      <table>
-      <thead>
-      <tr>
-      <th>Artist</th>
-      <th>Album</th>
-      <th>Year</th>
-      <th>Label</th>
-      <th>Awards</th>
-      <th>Songs</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-      <td>Michael Jackson</td>
-      <td>Thriller</td>
-      <td>1982</td>
-      <td>Epic Records</td>
-      <td>Grammy Award for Album of the Year, American Music Award for Favorite Pop/Rock Album, American Music Award for Favorite Soul/R&amp;B Album, Brit Award for Best Selling Album, Grammy Award for Best Engineered Album, Non-Classical</td>
-      <td>Wanna Be Startin' Somethin', Baby Be Mine, The Girl Is Mine, Thriller, Beat It, Billie Jean, Human Nature, P.Y.T. (Pretty Young Thing), The Lady in My Life</td>
-      </tr>
-      <tr>
-      <td>Prince</td>
-      <td>Purple Rain</td>
-      <td>1984</td>
-      <td>Warner Brothers Records</td>
-      <td>Grammy Award for Best Score Soundtrack for Visual Media, American Music Award for Favorite Pop/Rock Album, American Music Award for Favorite Soul/R&amp;B Album, Brit Award for Best Soundtrack/Cast Recording, Grammy Award for Best Rock Performance by a Duo or Group with Vocal</td>
-      <td>Let's Go Crazy, Take Me With U, The Beautiful Ones, Computer Blue, Darling Nikki, When Doves Cry, I Would Die 4 U, Baby I'm a Star, Purple Rain</td>
-      </tr>
-      <tr>
-      <td>Beastie Boys</td>
-      <td>License to Ill</td>
-      <td>1986</td>
-      <td>Mercury Records</td>
-      <td>noawardsbutthistablecelliswide</td>
-      <td>Rhymin &amp; Stealin, The New Style, She's Crafty, Posse in Effect, Slow Ride, Girls, (You Gotta) Fight for Your Right, No Sleep Till Brooklyn, Paul Revere, Hold It Now, Hit It, Brass Monkey, Slow and Low, Time to Get Ill</td>
-      </tr>
-      </tbody>
-      </table>
-
-      <hr>
-
-      <p>Code snippets like <code>var foo = "bar";</code> can be shown inline.</p>
-
-      <p>Also, <code>this should vertically align</code> <del><code>with this</code></del> <del>and this</del>.</p>
-
-      <p>Code can also be shown in a block element.</p>
-
-      <pre><code>var foo = "bar";
-</code></pre>
-
-      <p>Code can also use syntax highlighting.</p>
-
-      <div class="highlight highlight-Javascript"><pre><span class="pl-k">var</span> foo <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>bar<span class="pl-pds">"</span></span>;</pre></div>
-
-      <pre><code>Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.</code></pre>
-
-      <div class="highlight highlight-Javascript"><pre><span class="pl-k">var</span> foo <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>The same thing is true for code with syntax highlighting. A single line of code should horizontally scroll if it is really long.<span class="pl-pds">"</span></span>;</pre></div>
-
-      <p>Inline code inside table cells should still be distinguishable.</p>
-
-      <table>
-      <thead>
-      <tr>
-      <th>Language</th>
-      <th>Code</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-      <td>Javascript</td>
-      <td><code>var foo = "bar";</code></td>
-      </tr>
-      <tr>
-      <td>Ruby</td>
-      <td><code>foo = "bar"</code></td>
-      </tr>
-      </tbody>
-      </table>
-
-      <hr>
-
-      <p>Small images should be shown at their actual size.</p>
-
-      <p><a href="https://camo.githubusercontent.com/16a9d5241f679b6429fc0597f10816dd2665bbb2/687474703a2f2f706c6163656b697474656e2e636f6d2f672f3330302f3230302f" target="_blank"><img src="https://camo.githubusercontent.com/16a9d5241f679b6429fc0597f10816dd2665bbb2/687474703a2f2f706c6163656b697474656e2e636f6d2f672f3330302f3230302f" alt="" data-canonical-src="https://placekitten.com/g/300/200/" style="max-width:100%;"></a></p>
-
-      <p>Large images should always scale down and fit in the content container.</p>
-
-      <p><a href="https://camo.githubusercontent.com/afe46418285497605cf4f6376b75f8c818658fb1/687474703a2f2f706c6163656b697474656e2e636f6d2f672f313230302f3830302f" target="_blank"><img src="https://camo.githubusercontent.com/afe46418285497605cf4f6376b75f8c818658fb1/687474703a2f2f706c6163656b697474656e2e636f6d2f672f313230302f3830302f" alt="" data-canonical-src="https://placekitten.com/g/1200/800/" style="max-width:100%;"></a></p>
-
-      <pre><code>This is the final element on the page and there should be no margin below this.</code></pre>
-
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/jasonlong/cayman-theme">Cayman</a> is maintained by <a href="https://github.com/jasonlong">jasonlong</a>.</span>
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
-      </footer>
-
-    </section>
-
-  </body>
+<script src="vendor/js/jquery-1.12.4.min.js"></script>
+<script src="vendor/js/jquery-ui.min.js"></script>
+<script src="../dist/js/easy-alert.js"></script>
+<script src="js/demo.js"></script>
+</body>
 </html>
